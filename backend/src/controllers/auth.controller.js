@@ -5,8 +5,8 @@ import { registerSchema, loginSchema } from "../validators/auth.validator.js";
 
 const cookieOptions = {
   httpOnly: true,
-  secure: false,
-  sameSite: "lax",
+  secure: process.env.NODE_ENV === "production",
+  sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
 };
 
 export const register = async (req, res) => {

@@ -180,10 +180,10 @@ export default function Dashboard() {
       <div className="max-w-5xl mx-auto px-4 py-6">
         {/* Top Card */}
         <div className="bg-white rounded-2xl shadow p-5">
-          <h2 className="text-xl font-bold">dashboard</h2>
+          <h2 className="text-xl font-bold">Dashboard</h2>
           <p className="text-sm text-gray-600 mt-1">
             {me
-              ? `logged in as ${me.name} (${me.email})`
+              ? `Logged in as ${me.name} (${me.email})`
               : "loading profile..."}
           </p>
 
@@ -197,7 +197,7 @@ export default function Dashboard() {
 
         {/* Create Task */}
         <div className="bg-white rounded-2xl shadow p-5 mt-6">
-          <h3 className="font-semibold text-lg">create task</h3>
+          <h3 className="font-semibold text-lg">Create Task</h3>
 
           <form onSubmit={handleCreateTask} className="mt-4 grid gap-3">
             <input
@@ -219,9 +219,9 @@ export default function Dashboard() {
               value={priority}
               onChange={(e) => setPriority(e.target.value)}
             >
-              <option value="low">low</option>
-              <option value="medium">medium</option>
-              <option value="high">high</option>
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
             </select>
 
             <button
@@ -235,7 +235,7 @@ export default function Dashboard() {
 
         {/* Filters */}
         <div className="bg-white rounded-2xl shadow p-5 mt-6">
-          <h3 className="font-semibold text-lg">search & filter</h3>
+          <h3 className="font-semibold text-lg">Search & Filter</h3>
 
           <div className="mt-4 grid md:grid-cols-4 gap-3">
             <input
@@ -250,9 +250,9 @@ export default function Dashboard() {
               value={status}
               onChange={(e) => setStatus(e.target.value)}
             >
-              <option value="">all status</option>
-              <option value="pending">pending</option>
-              <option value="completed">completed</option>
+              <option value="">All</option>
+              <option value="pending">Pending</option>
+              <option value="completed">Completed</option>
             </select>
 
             <select
@@ -260,10 +260,10 @@ export default function Dashboard() {
               value={filterPriority}
               onChange={(e) => setFilterPriority(e.target.value)}
             >
-              <option value="">all priority</option>
-              <option value="low">low</option>
-              <option value="medium">medium</option>
-              <option value="high">high</option>
+              <option value="">All</option>
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
             </select>
 
             <button
@@ -271,7 +271,7 @@ export default function Dashboard() {
               onClick={handleApplyFilters}
               className="bg-black text-white rounded-xl py-2 font-medium"
             >
-              apply
+              Apply
             </button>
 
             <button
@@ -279,7 +279,7 @@ export default function Dashboard() {
               onClick={handleClearFilters}
               className="md:col-span-4 border rounded-xl py-2 font-medium"
             >
-              clear filters
+              Clear Filters
             </button>
           </div>
         </div>
@@ -287,14 +287,14 @@ export default function Dashboard() {
         {/* Task List */}
         <div className="bg-white rounded-2xl shadow p-5 mt-6">
           <div className="flex items-center justify-between">
-            <h3 className="font-semibold text-lg">your tasks</h3>
-            <p className="text-sm text-gray-500">{tasks.length} tasks</p>
+            <h3 className="font-semibold text-lg">Your Tasks</h3>
+            <p className="text-sm text-gray-500">{tasks.length} Tasks</p>
           </div>
 
           {loading ? (
-            <p className="mt-4 text-gray-600">loading tasks...</p>
+            <p className="mt-4 text-gray-600">Loading Tasks...</p>
           ) : tasks.length === 0 ? (
-            <p className="mt-4 text-gray-600">no tasks found</p>
+            <p className="mt-4 text-gray-600">No Tasks Found</p>
           ) : (
             <div className="mt-4 flex flex-col gap-3">
               {tasks.map((task) => (
@@ -327,22 +327,22 @@ export default function Dashboard() {
                       className="border rounded-xl px-3 py-2 text-sm"
                     >
                       {task.status === "pending"
-                        ? "mark completed"
-                        : "mark pending"}
+                        ? "Mark Completed"
+                        : "Mark Pending"}
                     </button>
 
                     <button
                       onClick={() => handleOpenEdit(task)}
                       className="border rounded-xl px-3 py-2 text-sm"
                     >
-                      edit
+                      Edit
                     </button>
 
                     <button
                       onClick={() => handleDelete(task._id)}
                       className="border rounded-xl px-3 py-2 text-sm text-red-600"
                     >
-                      delete
+                      Delete
                     </button>
                   </div>
                 </div>

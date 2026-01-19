@@ -33,7 +33,7 @@ export default function ProfileMenu() {
         onClick={() => setOpen((prev) => !prev)}
         className="px-3 py-2 rounded-xl border hover:bg-gray-100"
       >
-        profile
+        Profile
       </button>
 
       {open ? (
@@ -45,14 +45,14 @@ export default function ProfileMenu() {
             }}
             className="w-full text-left px-3 py-2 rounded-lg hover:bg-gray-100"
           >
-            update profile
+            Update Profile
           </button>
 
           <button
             onClick={handleLogout}
             className="w-full text-left px-3 py-2 rounded-lg hover:bg-gray-100 text-red-600"
           >
-            logout
+            Logout
           </button>
         </div>
       ) : null}

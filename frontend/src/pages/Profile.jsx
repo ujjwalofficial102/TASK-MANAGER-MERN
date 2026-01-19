@@ -66,7 +66,7 @@ export default function Profile() {
 
       <div className="max-w-2xl mx-auto px-4 py-6">
         <div className="bg-white rounded-2xl shadow p-6">
-          <h2 className="text-xl font-bold">update profile</h2>
+          <h2 className="text-xl font-bold">Update Profile</h2>
           <p className="text-sm text-gray-600 mt-1">
             update your name or password
           </p>
@@ -79,7 +79,7 @@ export default function Profile() {
 
           <form onSubmit={handleSubmit} className="mt-5 flex flex-col gap-4">
             <div className="flex flex-col gap-1">
-              <label className="text-sm font-medium">name</label>
+              <label className="text-sm font-medium">Name</label>
               <input
                 className="border rounded-xl px-3 py-2"
                 name="name"
@@ -89,7 +89,7 @@ export default function Profile() {
             </div>
 
             <div className="flex flex-col gap-1">
-              <label className="text-sm font-medium">new password</label>
+              <label className="text-sm font-medium">New Password</label>
               <input
                 className="border rounded-xl px-3 py-2"
                 name="password"
@@ -104,7 +104,7 @@ export default function Profile() {
               disabled={loading}
               className="bg-black text-white rounded-xl py-2 font-medium disabled:opacity-60"
             >
-              {loading ? "updating..." : "update"}
+              {loading ? "Updating..." : "Update"}
             </button>
           </form>
         </div>

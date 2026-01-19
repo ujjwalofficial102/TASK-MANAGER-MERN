@@ -2,6 +2,12 @@
 
 A full-stack (MERN) task manager dashboard with JWT authentication (cookies), profile update, and task CRUD operations with search & filter.
 
+## 🌐 Live Project
+
+Live Demo: [Task Manager MERN](https://calm-crisp-360933.netlify.app)
+
+> **Note:** The backend is hosted on Render (free tier), so the first request after inactivity may take a few seconds due to a cold start.
+
 ## 🚀 Features
 
 ### ✅ Authentication
